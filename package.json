@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/styled-components": "^5.1.14",
     "@unform/core": "^2.1.6",
     "@unform/web": "^2.1.6",
     "axios": "^0.21.1",
@@ -15,15 +16,19 @@
     "react-modal": "^3.12.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
-    "styled-components": "^5.2.1",
+    "styled-components": "^5.3.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.4.3",
     "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server server.json -p 3333"
+    "server": "json-server server.json -p 3333",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +50,24 @@
   },
   "devDependencies": {
     "json-server": "^0.16.3"
-  }
+  },
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SamuelBatis/refactoring-classes-ts.git"
+  },
+  "author": {
+    "name": "Samuel",
+    "email": "samuel.batistela12@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamuelBatis/refactoring-classes-ts/issues"
+  },
+  "homepage": "https://github.com/SamuelBatis/refactoring-classes-ts#readme",
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts"
 }
