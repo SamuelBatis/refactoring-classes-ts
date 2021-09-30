@@ -6,16 +6,16 @@ import api from '../../services/api';
 
 
 interface Ifood{
-  id: number,
-  name: string,
-  description: string,
-  price: string,
-  available: boolean,
-  image: string
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  available: boolean;
+  image: string;
 }
 
 interface FoodProps {
-  food: Ifood,
+  food: Ifood;
   handleEditFood: (food: Ifood) => void;
   handleDelete: (id:number) => void;
 }
